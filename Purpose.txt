@@ -1,0 +1,9 @@
+Purpose
+score
+decision
+
+What is accuracy -> 099%
+How did u train ur model -> normal = 0 , risk/anomly = 1
+What does 99% accuracy mean ->
+If I change 10 suspected transactions to 100 suspected transactions will ur model get 90% accuracy or not.
+Does ur precision and recall scores also change

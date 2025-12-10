@@ -1,189 +1,145 @@
-📘 Keyword Extraction System
+📘 Keyword Extraction System – Researcher’s Assistant
 
-A Hybrid NLP Web Application for Journalists, Researchers & Analysts
+A Streamlit-based NLP application that extracts keywords, generates summaries, and visualizes word clouds from any text document.
+Built using Python, Streamlit, Summa NLP, WordCloud, and Matplotlib.
 
-📌 Overview
+🚀 Features
+🔑 Keyword Extraction
 
-The Keyword Extraction System is a Streamlit-based web application designed to automatically extract keywords, generate summaries, and create word-cloud visualizations from any text document.
-It uses a hybrid NLP approach combining rule-based processing and the TextRank algorithm (from the Summa library).
+Uses the TextRank algorithm (Summa library) to extract the most important words and keyphrases.
 
-This tool helps users analyze large documents quickly—ideal for journalists, research scholars, corporate analysts, and students.
+📄 Text Summarization
 
-The complete functionality and workflow align with the detailed project description and diagrams in the PDF report (pages 1–4) 
+Generates an extractive summary by identifying the highest-ranked sentences.
 
-Group13
+☁️ Word Cloud Visualization
 
-.
+Creates a word cloud based on word frequency distribution.
 
-✨ Features
+📤 Input Options
 
-✔ Keyword Extraction using TextRank (Summa NLP)
-✔ Text Summarization (extractive)
-✔ Word Cloud Visualization
-✔ Upload .txt files or paste text directly
-✔ Downloadable results (keywords & summary)
-✔ Clean, interactive UI built with Streamlit
+Upload a .txt file
 
-Screenshots in the report (pages 11–12) show how the UI appears in action 
+Or paste text manually into the interface
 
-Group13
+📥 Download Support
 
-.
+Download:
 
-🛠️ Tech Stack
+Extracted keywords
 
-Python 3.x
+Generated summary
+
+🗂️ Project Workflow
+
+User uploads/pastes text
+
+System preprocesses text
+
+TextRank extracts keywords
+
+Summary is generated
+
+Word cloud is displayed
+
+Results are available for download
+
+🛠️ Technologies Used
+
+Python
 
 Streamlit (Frontend UI)
 
-Summa NLP (Keyword extraction & summarization)
+Summa NLP (TextRank algorithm)
 
-WordCloud + Matplotlib (Visualization)
+WordCloud
 
-These match the technologies listed in your PPT (Technologies Used section) 
-
-GENAIPPT_Group13
-
-.
+Matplotlib
 
 📦 Installation
 1️⃣ Clone the repository
-git clone <your-repository-url>
-cd <project-folder>
+git clone <your-repo-link>
+cd keyword-extraction-system
 
 2️⃣ Install dependencies
 
-Dependencies are taken directly from your requirements.txt file 
-
-requirements
-
-:
-
-pip install streamlit
-pip install summa
-pip install wordcloud
-pip install matplotlib
-
-
-OR simply:
+(From requirements.txt)
 
 pip install -r requirements.txt
 
-▶️ Running the App
+▶️ Running the Application
 
-Execute the Streamlit app:
+Run the Streamlit app using:
 
 streamlit run app.py
 
 
-The app will open in your browser at:
+The application will open in your default browser:
 
-http://localhost:8501/
-
-🧠 How It Works (Workflow)
-
-Based on the workflow in the PPT and report (pages 3–5) :
-
-User uploads text file or pastes text
-
-Preprocessing (cleaning, formatting)
-
-Keyword extraction using TextRank
-
-Summary generation
-
-Word cloud creation
-
-Results displayed with download buttons
-
-The diagram on page 3 visually explains this pipeline.
+http://localhost:8501
 
 📁 Project Structure
-📂 Keyword-Extraction-System
-│── app.py               # Main Streamlit application :contentReference[oaicite:9]{index=9}
-│── requirements.txt     # Dependencies :contentReference[oaicite:10]{index=10}
-│── README.md            # Project documentation
-│── Purpose.txt          # Purpose + Q&A notes :contentReference[oaicite:11]{index=11}
-│── /assets              # (Optional) screenshots, diagrams
+├── app.py                # Main Streamlit application
+├── requirements.txt      # Required packages
+├── README.md             # Project documentation
 
-📜 Code Summary
+🧠 How It Works (Core Logic)
+extract_keywords(text)
 
-Your application contains three major functions (from app.py 
+Uses summa.keywords()
 
-app
+Returns ranked keywords
 
-):
+Handles short or empty text gracefully
 
-🔹 extract_keywords(text)
+generate_summary(text)
 
-Uses TextRank (Summa)
+Uses summa.summarizer.summarize()
 
-Handles short text gracefully
+Extracts key sentences
 
-Returns ranked keyword list
+Word Cloud
 
-🔹 generate_summary(text)
+Created using WordCloud()
 
-Creates extractive summaries
+Rendered via Matplotlib in Streamlit
 
-Error-handled for short inputs
+🎯 Use Cases
 
-🔹 Word Cloud Builder
+Journalists analyzing long investigation reports
 
-Uses WordCloud + Matplotlib
+Researchers summarizing literature papers
 
-Generates high-frequency word visualization
+Business analysts extracting insights from corporate documents
 
-📚 Use Cases
+Students summarizing study materials
 
-From your project report (pages 2–3) 
+🌱 Future Enhancements
 
-Group13
-
-:
-
-1. Investigative Journalism
-
-Process long confidential reports and instantly extract important concepts.
-
-2. Research Literature Review
-
-Summaries & keywords help scholars understand papers faster.
-
-3. Corporate Report Analysis
-
-Analysts quickly extract insights from business documents.
-
-🔮 Future Enhancements
-
-Taken from PPT & report future scope sections (pages 13–14) :
-
-PDF & DOCX upload support
+PDF / DOCX upload support
 
 Multi-language keyword extraction
 
-Integration with BERT / Transformer models
+BERT / Transformer-based summarization
 
 Named Entity Recognition (NER)
 
-Topic Modeling (LDA, BERTopic)
+Topic Modeling (LDA / BERTopic)
 
-API version (FastAPI)
+API deployment using FastAPI
 
-👥 Team
+🧑‍💻 Team Members
 
-As listed in the PPT (cover slide) 
+M. Kalyani
 
-GENAIPPT_Group13
+B. Jahnavi
 
-:
+B. Ishwarya
 
-M. Kalyani – AP23110010343
+D. Turvi
 
-B. Jahnavi – AP23110010342
+S. L. S. Sanjana
 
-B. Ishwarya – AP23110010646
+📌 Conclusion
 
-D. Turvi – AP23110010391
-
-S. L. S. Sanjana – AP23110010295
+The Keyword Extraction System is a powerful, lightweight NLP tool that helps users quickly analyze large text documents. With automated keyword extraction, summarization, and visualization, the application enhances productivity and supports informed decision-making across multiple domains.
